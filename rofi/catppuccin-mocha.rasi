@@ -1,0 +1,124 @@
+* {
+    base: #1e1e2e;
+    mantle: #181825;
+    crust: #11111b;
+
+    blue: #89b4fa;
+    mauve: #cba6f7;
+    lavender: #b4befe;
+    red: #f38ba8;
+
+    // Mauve
+    main: #cba6f7;
+
+    surface: #313244;
+    overlay: #6c7086;
+    subtext: #a6adc8;
+    text: #cdd6f4;
+
+    font: "JetBrainsMono Nerd Font Bold 15";
+
+    border-color: @main;
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 500px;
+    width: 500px;
+    border: 2px;
+    border-radius: 4px;
+    background-color: @base;
+}
+
+mainbox {
+    background-color: @base;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @base;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @main;
+    padding: 4px;
+    text-color: @base;
+    border-radius: 4px;
+    margin: 20px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 4px;
+    margin: 20px 0px 0px 10px;
+    text-color: @text;
+    background-color: @base;
+}
+
+listview {
+    scrollbar: false;
+
+    padding: 4px 0px 0px;
+    margin: 20px 20px 20px 20px;
+    columns: 2;
+    lines: 1;
+
+    background-color: @base;
+}
+
+element {
+    border-radius: 4px;
+    padding: 4px;
+    background-color: @base;
+    text-color: @text;
+}
+
+element-icon {
+    size: 1em;
+}
+
+element selected {
+    background-color: @mantle;
+    text-color: @main;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding: 8px;
+    background-color: @mantle;
+    text-color: @overlay;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @crust;
+  text-color: @main;
+}
+
+message {
+    background-color: @base;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+textbox {
+    padding: 4px;
+    margin: 20px 0px 0px 20px;
+    text-color: @main;
+    background-color: @base;
+}
