@@ -1,0 +1,72 @@
+@import "mocha.css";
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: JetBrainsMono Nerd Font;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+window#waybar {
+	background: rgba(255, 0, 0, 0);
+}
+
+.modules-center, .modules-left, .modules-right {
+	background: @base;
+	border-radius: 4px;
+	border: 2px solid @mauve;
+}
+
+
+.modules-left, .modules-right {
+	padding: 0px 8px;
+}
+
+#clock {
+	color: @green;
+}
+
+#battery {
+	color: @yellow;
+}
+
+#pulseaudio {
+	color: @lavender;
+}
+
+#cpu {
+	color: @red;
+}
+
+#memory {
+	color: @blue;
+}
+
+#temperature {
+	color: @rosewater;
+}
+
+#workspaces button {
+	padding: 0 8px;
+	color: @text;
+	border-radius: 4px;
+}
+
+#workspaces button.empty {
+	color: @overlay0;
+}
+
+#workspaces button.active {
+	background: @mantle;
+	color: @mauve;
+}
+
+#workspaces button.urgent {
+	background: @red;
+	color: @base;
+}
+
+#workspaces button:hover {
+	background: @overlay0;
+}

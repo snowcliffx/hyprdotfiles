@@ -1,0 +1,18 @@
+configuration {
+	modes: "run,drun,window";
+	location: 0;
+	icon-theme: "Papirus";
+	font: "hack 10";
+	show-icons: true;
+	terminal: "alacritty";
+	disable-history: false;
+	hide-scrollbar: true;
+	drun-display-format: "{icon} {name}";
+	display-drun: "   Apps ";
+	display-run: "   Run ";
+	display-window: " 󰕰  Window ";
+	display-Network: " 󰤨  Network";
+	sidebar-mode: true;
+}
+
+@theme "catppuccin-mocha"
