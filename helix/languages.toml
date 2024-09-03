@@ -1,35 +1,19 @@
 [[language]]
-name = "go"
-auto-format = false
-indent = { tab-width = 4, unit = "    " }
-
-[[language]]
-name = "zig"
-auto-format = false
-indent = { tab-width = 4, unit = "    " }
-
-[[language]]
 name = "rust"
 auto-format = false
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
-name = "c"
+name = "gdscript"
 auto-format = false
-indent = { tab-width = 4, unit = "    " }
-
-[[language]]
-name = "cpp"
-auto-format = false
-indent = { tab-width = 4, unit = "    " }
-
-[[language]]
-name = "hyprlang"
-auto-format = false
-indent = { tab-width = 4, unit = "    " }
+language-servers = [ "godot" ]
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"
+
+[language-server.godot]
+command = "nc"
+args = [ "127.0.0.1", "6005" ]
 
 [language-server.rust-analyzer.config]
 inlayHints.bindingModeHints.enable = false
@@ -38,4 +22,3 @@ inlayHints.closureReturnTypeHints.enable = "with_block"
 inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.typeHints.hideClosureInitialization = false
-
