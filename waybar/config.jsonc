@@ -47,7 +47,8 @@
     "clock": {
 	    "interval": 60,
 	    "format": "TIME: {:%H:%M}",
-	    "format-alt": "TIME {:%Y-%m-%d}"
+	    "format-alt": "TIME: {:%Y-%m-%d}",
+	    "tooltip": false
     },
 
     "cpu": {
