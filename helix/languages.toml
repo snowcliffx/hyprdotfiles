@@ -3,17 +3,8 @@ name = "rust"
 auto-format = false
 indent = { tab-width = 4, unit = "    " }
 
-[[language]]
-name = "gdscript"
-auto-format = false
-language-servers = [ "godot" ]
-
 [language-server.rust-analyzer]
 command = "rust-analyzer"
-
-[language-server.godot]
-command = "nc"
-args = [ "127.0.0.1", "6005" ]
 
 [language-server.rust-analyzer.config]
 inlayHints.bindingModeHints.enable = false
