@@ -81,5 +81,10 @@
 	    "format": "VOL: {volume}%",
 	    "format-muted": "VOL: MUTED",
 	    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "tray": {
+      "icon-size": 24,
+      "spacing": 10,
     }
 }
