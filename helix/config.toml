@@ -5,7 +5,7 @@ line-number = "absolute"
 mouse = false
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "block"
 select = "underline"
 
