@@ -2,88 +2,107 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     // "source":"$HOME/.config/fastfetch/ascii/thumbsup.txt",
-    "type": "file",
+    "type": "builtin",
   },
-
-  "display": {
-    "separator": "|"
-  },
-
+  
   "modules": [
-    {
-      "type": "title",
-      "key": " "
-    },
-    {
-      "type": "custom",
-      "format": "┌──────────────────────────────────────────┐"
-    },
-    {
-      "type": "os",
-      "key": " ",
-      "keyColor": "red"
-    },
-    {
-      "type": "kernel",
-      "key": " ",
-      "keyColor": "red"
-    },
-    {
-      "type": "packages",
-      "key": " ",
-      "keyColor": "green"
-    },
-    {
-      "type": "display",
-      "key": " ",
-      "keyColor": "green"
-    },
-    {
-      "type": "wm",
-      "key": " ",
-      "keyColor": "yellow"
-    },
-    {
-      "type": "terminal",
-      "key": " ",
-      "keyColor": "yellow"
-    },
-    {
-      "type": "cpu",
-      "format": "{1}",
-      "key": " ",
-      "keyColor": "blue"
-    },
-    {
-      "type": "gpu",
-      "format": "{2}",
-      "key": " ",
-      "keyColor": "blue"
-    },
-    {
-      "type": "gpu",
-      "format": "{3}",
-      "key": " ",
-      "keyColor": "magenta"
-    },
-    {
-      "type": "memory",
-      "key": "󰍛 ",
-      "keyColor": "magenta"
-    },      
-    {
-      "type": "uptime",
-      "key": "󱫐 ",
-      "keyColor": "red"
-    },
-    {
-      "type": "custom",
-      "format": "└──────────────────────────────────────────┘"
-    },
-    {
-      "type": "colors",
-      "paddingLeft": 15,
-      "symbol": "circle"
-    },
+        "break",
+        {
+            "type": "custom",
+            "format": "┌────────────────────── Hardware ──────────────────────┐",
+            "outputColor": "red"
+        },
+        {
+            "type": "title",
+            "key": "Host",
+            "keyColor": "green"
+        },
+        {
+            "type": "cpu",
+            "key": "├󰍛 CPU",
+            "showPeCoreCount": true,
+            "format": "{1} {7}",
+            "keyColor": "green"
+        },
+        {
+            "type": "gpu",
+            "key": "├󰍛 GPU",
+            "keyColor": "green",
+            "format": "{1} {2}"
+        },
+        {
+            "type": "memory",
+            "key": "└󰍛 Memory",
+            "keyColor": "green"
+        },
+        {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────────────────┘",
+            "outputColor": "red"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "┌────────────────────── Software ──────────────────────┐",
+            "outputColor": "red"
+        },
+        {
+            "type": "os",
+            "key": "Operating System",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "kernel",
+            "key": "├ Kernel",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "├󰏖 Packages",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "shell",
+            "key": "├ Shell",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "command",
+            "key": "├ DSCI",
+            "keyColor": "yellow",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+        },
+        {
+            "type": "uptime",
+            "key": "└ Uptime",
+            "keyColor": "yellow"
+        },
+        "break",
+        {
+            "type": "wm",
+            "key": "┌ Window Manager",
+            "keyColor": "blue"
+        },
+        {
+            "type": "gpu",
+            "key": "├󰍛 GPU Driver",
+            "format": "{3}",
+            "keyColor": "blue"
+        },
+        {
+            "type": "lm",
+            "key": "└ Login Manager",
+            "keyColor": "blue"
+        },
+        {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────────────────┘",
+            "outputColor": "red"
+        },    
+        {
+            "type": "colors",
+            "paddingLeft": 21,
+            "symbol": "circle"
+        },
     ]
 }
