@@ -4,7 +4,7 @@ configuration {
 	icon-theme: "Papirus";
 	font: "hack 10";
 	show-icons: true;
-	terminal: "alacritty";
+	terminal: "foot";
 	disable-history: false;
 	hide-scrollbar: true;
 	drun-display-format: "{icon} {name}";
