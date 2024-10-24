@@ -3,7 +3,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: JetBrainsMono Nerd Font;
+	font-family: Hack;
 	font-weight: bold;
 	font-size: 16px;
 }
@@ -17,7 +17,6 @@ window#waybar {
 	border-radius: 4px;
 	border: 2px solid @mauve;
 }
-
 
 .modules-left, .modules-right {
 	padding: 0px 8px;

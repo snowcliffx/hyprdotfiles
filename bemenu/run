@@ -1,0 +1,1 @@
+bemenu-run -c -l 15 -W 0.25 -R 4 -B 2 --fn "JetBrainsMono 15" --fb "#11111b" --ff "#cdd6f4" --nb "#1e1e2e" --nf "#cdd6f4" --tb "#11111b" --hb "#181825" --tf "#f38ba8" --hf "#f9e2af" --af "#cdd6f4" --ab "#1e1e2e" --bdr "#cba6f7"
