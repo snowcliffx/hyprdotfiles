@@ -1,90 +1,90 @@
 {
-    "position": "bottom",
-    "height" : 40,
-    "margin-bottom": 16,
-    "margin-right": 16,
-    "margin-left": 16,
-    "spacing": 16,
-
-    "modules-left": [
-	"clock",
-    	"battery",
-	"pulseaudio"
-    ],
-
-    "modules-center": [
-    	"hyprland/workspaces"
-    ],
-
-    "modules-right": [
-	"cpu",
-	"memory",
-	"temperature"
-    ],
-
-    "hyprland/window": {
-      "format": "{}",
-      "max-length": 35,
-
-      "rewrite": {
-        "": "Hyprland"
-      },
-
-      "separate-outputs": true
+  "position": "bottom",
+  "height" : 40,
+  "margin-bottom": 16,
+  "margin-right": 16,
+  "margin-left": 16,
+  "spacing": 16,
+  
+  "modules-left": [
+    "clock",
+    "battery",
+    "pulseaudio"
+  ],
+  
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  
+  "modules-right": [
+    "cpu",
+    "memory",
+    "temperature"
+  ],
+  
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 35,
+    
+    "rewrite": {
+      "": "Hyprland"
     },
-
-    "hyprland/workspaces": {
-      "format": "{icon}",
-      "on-click": "activate",
-
-      "persistent-workspaces": {
-	"*": 10	      
-      },
-      
-      "sort-by-number": true
+    
+    "separate-outputs": true
+  },
+  
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    
+    "persistent-workspaces": {
+      "*": 10	      
     },
-
-    "clock": {
-	    "interval": 60,
-	    "format": "TIME: {:%H:%M}",
-	    "format-alt": "TIME: {:%Y-%m-%d}",
-	    "tooltip": false
+    
+    "sort-by-number": true
+  },
+  
+  "clock": {
+    "interval": 60,
+    "format": "TIME: {:%H:%M}",
+    "format-alt": "TIME: {:%Y-%m-%d}",
+    "tooltip": false
+  },
+  
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "tooltip": false
+  },
+  
+  "memory": {
+    "format": "MEM: {percentage}%",
+    "tooltip": false
+  },
+  
+  "temperature": {
+    "critical-threshold": 80,
+    "thermal-zone": 6,
+    "format": "TEMP: {temperatureC}°C"
+  },
+  
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
     },
-
-    "cpu": {
-      "format": "CPU: {usage}%",
-      "tooltip": false
-    },
-
-    "memory": {
-      "format": "MEM: {percentage}%",
-      "tooltip": false
-    },
-
-    "temperature": {
-      "critical-threshold": 80,
-      "thermal-zone": 6,
-      "format": "TEMP: {temperatureC}°C"
-    },
-
-    "battery": {
-      "states": {
-        "warning": 30,
-        "critical": 15
-      },
-
-      "format": "BAT: {capacity}%",
-      "format-full": "BAT: FULL"
-    },
-
-    "pulseaudio": {
-	    "format": "VOL: {volume}%",
-	    "format-muted": "VOL: MUTED",
-	    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-    },
-
-    "tray": {
-      "icon-size": 24,
-      "spacing": 10,
-    }
+    
+    "format": "BAT: {capacity}%",
+    "format-full": "BAT: FULL"
+  },
+  
+  "pulseaudio": {
+    "format": "VOL: {volume}%",
+    "format-muted": "VOL: MUTED",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+  
+  "tray": {
+    "icon-size": 24,
+    "spacing": 10,
+  }
 }
