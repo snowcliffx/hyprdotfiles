@@ -19,7 +19,8 @@
   "modules-right": [
     "cpu",
     "memory",
-    "temperature"
+    "temperature",
+    "tray"
   ],
   
   "hyprland/window": {
