@@ -1,71 +1,187 @@
-@import "mocha.css";
+@import "color.css";
 
 * {
-	border: none;
-	border-radius: 0;
-	font-family: JetBrainsMono;
-	font-weight: bold;
-	font-size: 16px;
+  border: 0;
+  padding: 0 0;
+  font-family: "JetBrainsMono";
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.5s ease;
 }
 
 window#waybar {
-	background: rgba(255, 0, 0, 0);
+  /* border-bottom: 4px solid shade(@base, 1.1); */
+  background-color: shade(#1e1e2e, 0.95);
 }
 
-.modules-center, .modules-left, .modules-right {
-	background: @base;
-	border-radius: 4px;
-	border: 2px solid @mauve;
+#workspaces button * {
+  color: @mauve;
+  border-radius: 50%;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 2px 6px 2px 6px;
 }
 
-.modules-left, .modules-right {
-	padding: 0px 8px;
+#workspaces button.empty * {
+  color: @lavender;
+  box-shadow: none;
+  /* Remove predefined box-shadow */
+  text-shadow: none;
+  /* Remove predefined text-shadow */
+  border: 0px;
+  border-radius: 10px;
+  background: none;
+}
+
+#workspaces {
+  border-style: solid;
+  background-color: @base;
+  opacity: 1;
+  border-radius: 10px;
+  margin: 8px 0px 8px 10px;
+}
+
+#workspaces button.active * {
+  color: @mauve;
+  border-radius: 20px;
+}
+
+#workspaces button.visible * {
+  color: @red;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#mode,
+#tray {
+  padding: 5px 8px;
+  border-style: solid;
+  background-color: shade(@base, 1.1);
+  opacity: 1;
+  margin: 8px 0;
+}
+
+#mode {
+  border-radius: 10px;
+  color: @mauve;
+  margin-right: 5px;
 }
 
 #clock {
-	color: @green;
+  color: @sky;
+  border-radius: 10px;
+  margin: 8px 10px;
+}
+
+#backlight {
+  color: @yellow;
+  border-radius: 10px 0 0 10px;
 }
 
 #battery {
-	color: @yellow;
+  color: #d8dee9;
+  border-radius: 0 10px 10px 0;
+  margin-right: 10px;
 }
 
-#pulseaudio {
-	color: @lavender;
+#battery.charging {
+  color: #81a1c1;
+}
+
+@keyframes blink {
+  to {
+    color: @red;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: #bf616a;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #cpu {
-	color: @red;
+  color: @sky;
+}
+
+#cpu-icon {
+  color: @sky;
 }
 
 #memory {
-	color: @blue;
+  color: @sky;
+  border-radius: 0 10px 10px 0;
+  margin-right: 10px;
+}
+
+#network.disabled {
+  color: #bf616a;
+}
+
+#network {
+  color: @green;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+#network.disconnected {
+  color: #bf616a;
+}
+
+#pulseaudio {
+  color: @flamingo;
+  border-radius: 0 10px 10px 0;
+  margin-right: 10px;
+}
+
+#pulseaudio.muted {
+  color: #3b4252;
+  border-radius: 0 10px 10px 0;
+  margin-right: 10px;
 }
 
 #temperature {
-	color: @rosewater;
+  color: @teal;
+  border-radius: 10px 0 0 10px;
 }
 
-#workspaces button {
-	padding: 0 8px;
-	color: @text;
-	border-radius: 4px;
+#temperature.critical {
+  color: @red;
 }
 
-#workspaces button.empty {
-	color: @overlay0;
+#tray {
+  margin: 8px 10px;
+  border-radius: 10px;
 }
 
-#workspaces button.active {
-	background: @mantle;
-	color: @mauve;
+#custom-launcher {
+  font-size: 20px;
+  background-color: shade(@base, 1.1);
+  color: @mauve;
+  border-radius: 0px 15px 0px 0px;
+  padding: 5px 10px 5px 10px;
 }
 
-#workspaces button.urgent {
-	background: @red;
-	color: @base;
+#custom-power {
+font-size: 20px;
+  color: @red;
+  background-color: shade(@base, 1.1);
+  border-radius: 15px 0px 0px 0px;
+  padding: 10px 5px 10px 5px;
 }
 
-#workspaces button:hover {
-	background: @overlay0;
+#window {
+  border-style: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #eceff4;
 }
