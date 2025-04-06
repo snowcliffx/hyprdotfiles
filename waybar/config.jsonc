@@ -7,6 +7,7 @@
   "modules-left": [
     "custom/launcher",
     "clock",
+    "battery",
     "tray",
   ],
   
@@ -30,7 +31,7 @@
 		"on-click": "activate",
 
     "persistent-workspaces": {
-      "*": 9	      
+      "*": 9	     
     },
 		
 		"format-icons": {
@@ -78,12 +79,13 @@
   
   "cpu": {
     "format": " {}%",
-    "on-click": "foot -e htop"
+    "on-click": "foot -e btop"
   },
   
   "memory": {
+    "interval": 60
     "format": " {}%",
-    "on-click": "foot -e htop"
+    "on-click": "foot -e btop"
   },
   
   "temperature": {
@@ -112,6 +114,7 @@
   },
   
   "network": {
+    "interface": "wlan0",
     "format": "⚠  Disabled",
     "format-wifi": "  {essid}",
     "format-ethernet": "  Wired",
