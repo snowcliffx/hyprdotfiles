@@ -1,0 +1,120 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-pro"
+    }
+  },
+  "icon_theme": "Catppuccin Mocha",
+  "active_pane_modifiers": {
+    "border_size": 0.0,
+    "inactive_opacity": 1.0
+  },
+
+  "bottom_dock_layout": "contained",
+
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+
+  "restore_on_startup": "last_workspace",
+  "autoscroll_on_clicks": false,
+  "auto_update": true,
+  "base_keymap": "VSCode",
+
+  "buffer_font_family": "Mononoki Nerd Font",
+  "buffer_font_weight": 700,
+  "buffer_font_size": 16,
+
+  "ui_font_size": 16,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Colorizer Pro"
+  },
+  //
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "path": "clangd",
+        "arguments": []
+      }
+    },
+
+    "luau-lsp": {
+      "settings": {
+        "luau-lsp": {
+          "sourcemap": {
+            "enabled": true,
+            "autogenerate": false,
+            "rojoProjectFile": "default.project.json",
+            "includeNonScripts": true,
+            "sourcemapFile": "sourcemap.json"
+          },
+          "diagnostics": {
+            "includeDependents": true,
+            "workspace": true,
+            "strictDatamodelTypes": false
+          },
+          "inlayHints": {
+            // "none" | "literals" | "all"
+            "parameterNames": "literals",
+            "parameterTypes": true,
+            "hideHintsForErrorTypes": false
+          },
+          "completion": {
+            "enabled": true,
+            "autocompleteEnd": true,
+            "addParentheses": true,
+            "addTabstopAfterParentheses": true,
+            "fillCallArguments": true,
+            "showPropertiesOnMethodCall": false,
+            "enableFragmentAutocomplete": false
+          }
+        },
+
+        "roblox": {
+          "enabled": true,
+          "security_level": "plugin",
+          "download_api_documentation": true,
+          "download_definitions": true
+        },
+
+        "fflags": {
+          "enable_by_default": false,
+          "enable_new_solver": true,
+          "sync": true,
+          "override": {}
+        },
+
+        "plugin": {
+          "enabled": true,
+          // The port number to connect the Roblox Studio Plugin to.
+          "port": 3667,
+          // The path to the luau-lsp-proxy binary you want to force the extension
+          // to use. If null, the extension tries to install it itself.
+          "proxy_path": null
+        },
+
+        "binary": {
+          "ignore_system_version": false
+        },
+        // Additional definition file paths to pass to the language server.
+        "definitions": ["definitions.luau"],
+        // Additional documentation file paths to pass to the language server.
+        "documentation": ["dictionary.json"]
+      }
+    }
+  }
+}

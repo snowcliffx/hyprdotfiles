@@ -1,0 +1,110 @@
+{
+  "function": {
+    "prefix": "func",
+    "body": "function ${1:functionName}(${2:args})\n\t${0}\nend",
+    "description": "A group of statements that perform a task together."
+  },
+  "anonymous function": {
+    "prefix": "afunc",
+    "body": "${1:functionName} = function(${2:args})\n\t${0}\nend",
+    "description": "A group of statements, without a name, that perform a task together."
+  },
+  "local function": {
+    "prefix": "lfunc",
+    "body": "local function ${1:functionName}(${2:args})\n\t${0}\nend",
+    "description": "A group of statements, restricted to a given scope, that perform a task together."
+  },
+  "for loop": {
+    "prefix": "for",
+    "body": "for ${1:i} = ${2:start}, ${3:end}, ${4:increment} do\n\t${0}\nend",
+    "description": "A loop that will execute something for each value of var from exp1 to exp2, using exp3 as the step to increment var."
+  },
+  "for pairs loop": {
+    "prefix": "forp",
+    "body": "for ${1:key}, ${2:value} in pairs(${3:table}) do\n\t${0}\nend",
+    "description": "Returns an iterator function that will iterate over all key-value pairs of the table passed."
+  },
+  "for ipairs loop": {
+    "prefix": "fori",
+    "body": "for ${1:index}, ${2:value} in ipairs(${3:table}) do\n\t${0}\nend",
+    "description": "Returns an iterator function that will iterate over all index-value pairs of the table passed."
+  },
+  "if condition": {
+    "prefix": "if",
+    "body": "if ${1:condition} then\n\t${0}\nend",
+    "description": "Executes a block of code if a specific condition is true."
+  },
+  "if else condition": {
+    "prefix": "ife",
+    "body": "if ${1:condition} then\n\t${0}\nelse\n\t\nend",
+    "description": "Executes a block of code if a specific condition is true and all the previous conditions are not met"
+  },
+  "if not condition": {
+    "prefix": "ifn",
+    "body": "if not ${1:condition} then\n\t${0}\nend",
+    "description": "Executes a block of code if a specific condition is false."
+  },
+  "if not else condition": {
+    "prefix": "ifne",
+    "body": "if not ${1:condition} then\n\t${0}\nelse\n\t\nend",
+    "description": "Executes a block of code if a specific condition is false and all the previous conditions are not met."
+  },
+  "repeat loop": {
+    "prefix": "rep",
+    "body": "repeat\n\t${0}\nuntil ${1:condition}",
+    "description": "Repeatedly executes a block of code until the condition is met."
+  },
+  "while loop": {
+    "prefix": "whi",
+    "body": "while ${1:condition} do\n\t${0}\nend",
+    "description": "Repeatedly executes a block of code while the condition is true."
+  },
+
+  "local variable": {
+    "prefix": "loc",
+    "body": "local ${1:variable} = ${2:value}",
+    "description": "A variable accessible only within the scope of where it's declared."
+  },
+  "table": {
+    "prefix": "tab",
+    "body": "${1:variable} = {${2:values}}",
+    "description": "A global table accessible by all scopes wthin the same script."
+  },
+  "local table": {
+    "prefix": "ltab",
+    "body": "local ${1:variable} = {${2:values}}",
+    "description": "A table accessible only within the scope of where it's declared."
+  },
+  "return": {
+    "prefix": "ret",
+    "body": "return ${1:value}",
+    "description": "Returns results or finishes a function."
+  },
+
+  "print": {
+    "prefix": "pri",
+    "body": "print(${1:params})",
+    "description": "Receives any number of arguments, and prints their values to the output."
+  },
+  "require": {
+    "prefix": "req",
+    "body": "require(${1:hierarchicalLocation})",
+    "description": "Returns what the required ModuleScript returns."
+  },
+  "tonumber": {
+    "prefix": "tonum",
+    "body": "tonumber(${1:arg})",
+    "description": "Attempts to convert the arg into a number with a specified base to interpret the value in. If it cannot be converted, this function returns nil."
+  },
+  "tostring": {
+    "prefix": "tostr",
+    "body": "tostring(${1:e})",
+    "description": "Receives an argument of any type and converts it to a string in a reasonable format."
+  },
+
+  "get service": {
+    "prefix": "getser",
+    "body": "local $1 = game:GetService(\"${1|AssetService,BadgeService,ChangeHistoryService,CollectionService,ContextActionService,DataStoreService,GamepadService,GamePassService,GroupService,GuiService,HapticService,HttpService,InsertService,JointsService,LocalizationService,LogService,MarketplaceService,MessagingService,PathfindingService,PhysicsService,PluginGuiService,PolicyService,RunService,ServerScriptService,SocialService,SoundService,StudioService,TeleportService,TestService,TextService,TweenService,UserInputService,VRService,Workspace|}\")",
+    "description": "Returns a service with the class name requested."
+  }
+}

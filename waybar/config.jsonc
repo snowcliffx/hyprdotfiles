@@ -74,7 +74,7 @@
       "on-scroll-down": "shift_down"
     },
     
-    "format": " {:%d/%m/%Y %H:%M}",
+    "format": " {:%d/%m/%Y %H:%M}",
     "interval": 60
   },
   

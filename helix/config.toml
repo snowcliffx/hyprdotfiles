@@ -1,11 +1,25 @@
 theme = "catppuccin_mocha"
 
 [editor]
-line-number = "absolute"
+scrolloff = 3
 mouse = false
+line-number = "relative"
+completion-timeout = 100
+clipboard-provider = "wayland"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["separator","file-name", "separator"]
+right = ["diagnostics", "version-control", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "¤"
+mode.normal = "I AM KEYBOARD GOD"
+mode.insert = "FUHUUCK TIME TO WRITE"
+mode.select = "THIS IS NOT VIM"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
 
 [editor.cursor-shape]
-insert = "block"
+insert = "bar"
 normal = "block"
 select = "underline"
 
