@@ -48,6 +48,7 @@ layout {
     gaps 16
     center-focused-column "on-overflow"
     default-column-display "normal"
+    always-center-single-column
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
