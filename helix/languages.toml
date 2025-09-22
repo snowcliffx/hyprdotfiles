@@ -1,6 +1,14 @@
 [language-server]
-luau = { commands = "luau-lsp", args = ["lsp", "--definitions=definitions.luau", "--docs=docs.json"] }
+luau = { commands = "luau-lsp", args = [
+    "lsp", "--definitions=definitions.luau", "--docs=docs.json",
+    "--flag:LuauSolverV2=true",
+    "--flag:DebugLuauStringSingletonBasedOnQuotes=true"
+]}
 
 [[language]]
 name = "cpp"
 formatter = { command = "clang-format" }
+
+[[language]]
+name = "luau"
+formatter = { command = "stylua" }

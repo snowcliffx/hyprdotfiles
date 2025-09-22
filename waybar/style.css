@@ -36,7 +36,7 @@ window#waybar {
   color: @text;
 }
 
-#workspaces button.visible * {
+#workspaces button.active * {
   /* transition: all 0.2s ease; causes mem leak apparently */
   font-size: 28px;
   color: @blue;
@@ -53,7 +53,6 @@ window#waybar {
 #backlight,
 #network,
 #pulseaudio,
-#mode,
 #tray {
   background-color: @surface0;
   padding: 0px 8px;
@@ -62,27 +61,18 @@ window#waybar {
   margin-bottom: 0px;
 }
 
-#mode {
-  border-radius: 8px;
-  color: @mauve;
-  margin-right: 4px;
-}
-
 #clock {
   color: @sky;
-  border-radius: 8px;
   margin-left: 8px;
   margin-right: 8px;
 }
 
 #backlight {
   color: @yellow;
-  border-radius: 8px 0 0 8px;
 }
 
 #battery {
   color: @green;
-  border-radius: 8px;
   margin-right: 8px;
 }
 
@@ -96,7 +86,6 @@ window#waybar {
 
 #memory {
   color: @sky;
-  border-radius: 0 8px 8px 0;
   margin-right: 8px;
 }
 
@@ -106,7 +95,6 @@ window#waybar {
 
 #network {
   color: @green;
-  border-radius: 8px;
   margin-right: 8px;
 }
 
@@ -117,19 +105,16 @@ window#waybar {
 #pulseaudio {
   transition: all 0.5s ease;
   color: @flamingo;
-  border-radius: 0 8px 8px 0;
   margin-right: 8px;
 }
 
 #pulseaudio.muted {
   color: #3b4252;
-  border-radius: 0 8px 8px 0;
   margin-right: 8px;
 }
 
 #temperature {
   color: @teal;
-  border-radius: 8px 0px 0px 8px;
 }
 
 #temperature.critical {
