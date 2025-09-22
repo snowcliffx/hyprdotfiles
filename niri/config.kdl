@@ -47,6 +47,7 @@ output "eDP-1" {
 layout {
     gaps 16
     center-focused-column "on-overflow"
+    default-column-display "normal"
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
@@ -67,15 +68,8 @@ layout {
     border {
         width 2
         active-color "#89b4fa"
-        inactive-color "#505050"
+        inactive-color "#6c7086"
         urgent-color "#9b0000"
-
-        // Gradients can use a few different interpolation color spaces.
-        // For example, this is a pastel rainbow gradient via in="oklch longer hue".
-        //
-        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
-
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     shadow {
@@ -147,7 +141,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
