@@ -12,7 +12,7 @@
   ],
   
   //"modules-center": ["niri/workspaces"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": ["niri/workspaces"],
   
   "modules-right": [
     "backlight",
@@ -46,9 +46,8 @@
   "niri/workspaces": {
     "format": "{icon}",
       "format-icons": {
-      "focused": "",
+      "active": "",
       "default": "",
-      "empty": "",
     },
     
     "on-click": "activate"
