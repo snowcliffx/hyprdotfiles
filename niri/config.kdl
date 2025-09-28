@@ -7,6 +7,11 @@
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
 
+workspace "Work"
+workspace "Web"
+workspace "Chat"
+workspace "Music"
+
 input {
     keyboard {
         xkb {
@@ -195,6 +200,7 @@ binds {
     Mod+W hotkey-overlay-title="Open a Browser: Firefox" { spawn "firefox"; }
     Mod+Shift+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+P hotkey-overlay-title="Open the Power Menu: wlogout" { spawn "wlogout" "--show-binds"; }
+    Mod+Y hotkey-overlay-title="Open File Manager: yazi" { spawn-sh "foot yazi"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),

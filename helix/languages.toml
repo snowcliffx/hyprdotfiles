@@ -1,14 +1,31 @@
-[language-server]
-luau = { commands = "luau-lsp", args = [
-    "lsp", "--definitions=definitions.luau", "--docs=docs.json",
-    "--flag:LuauSolverV2=true",
+[language-server.luau-lsp]
+command = "luau-lsp"
+args = [
+    "lsp",
+    "--flag:LuauSolverV2=true",    
     "--flag:DebugLuauStringSingletonBasedOnQuotes=true"
-]}
+]
 
-[[language]]
-name = "cpp"
-formatter = { command = "clang-format" }
+[language-server.luau-lsp.config]
+completion = { enabled = true, autocompleteEnd = true }
+platform = { type = "roblox" }
 
 [[language]]
 name = "luau"
+
+scope = "source.luau"
+injection-regex = "^luau$"
+file-types = ["luau", "server.luau", "client.luau"]
+comment-tokens = ["--", "---"]
+
+block-comment-tokens = [
+  {start = "--[[", end = "]]"},
+  {start = "--[=[", end = "]=]"},
+  {start = "--[==[", end = "]==]"}
+]
+
+indent = { tab-width = 2, unit = "  "}
+roots = [ "aftman.toml", "default.project.json", "wally.toml", "rokit.toml", "selene.toml", ".darklua.json", "foreman.toml", ".luaurc" ]
+
 formatter = { command = "stylua" }
+language-servers = ["luau-lsp"]
