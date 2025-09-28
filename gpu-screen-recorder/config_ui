@@ -7,7 +7,7 @@ main.software_encoding_warning_shown false
 main.tint_color intel
 record.container mp4
 record.pause_unpause_hotkey 0 0
-record.record_options.advanced_view false
+record.record_options.advanced_view true
 record.record_options.application_audio_invert false
 record.record_options.audio_codec opus
 record.record_options.audio_track_item false [add_audio_track]
