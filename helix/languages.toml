@@ -15,7 +15,7 @@ name = "luau"
 
 scope = "source.luau"
 injection-regex = "^luau$"
-file-types = ["luau", "server.luau", "client.luau"]
+file-types = ["luau", "server.luau", "client.luau", "lua"]
 comment-tokens = ["--", "---"]
 
 block-comment-tokens = [

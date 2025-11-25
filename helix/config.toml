@@ -19,7 +19,7 @@ diagnostics = ["warning", "error"]
 workspace-diagnostics = ["warning", "error"]
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "block"
 select = "underline"
 
