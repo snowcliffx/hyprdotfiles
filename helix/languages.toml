@@ -10,9 +10,11 @@ args = [
 completion = { enabled = true, autocompleteEnd = true }
 platform = { type = "roblox" }
 
+[language-server.qmlls]
+command = "qmlls6"
+
 [[language]]
 name = "luau"
-
 scope = "source.luau"
 injection-regex = "^luau$"
 file-types = ["luau", "server.luau", "client.luau", "lua"]
@@ -26,6 +28,5 @@ block-comment-tokens = [
 
 indent = { tab-width = 2, unit = "  "}
 roots = [ "aftman.toml", "default.project.json", "wally.toml", "rokit.toml", "selene.toml", ".darklua.json", "foreman.toml", ".luaurc" ]
-
 formatter = { command = "stylua" }
 language-servers = ["luau-lsp"]

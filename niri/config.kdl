@@ -15,7 +15,7 @@ workspace "Music"
 input {
     keyboard {
         xkb {
-            layout "tr"
+            layout "us"
         }
 
         repeat-delay 300
@@ -234,13 +234,13 @@ binds {
     Mod+Ctrl+N { move-column-to-first; }
     Mod+Ctrl+M { move-column-to-last; }
 
-    Mod+Idotless      { focus-workspace-down; }
+    Mod+I             { focus-workspace-down; }
     Mod+U             { focus-workspace-up; }      
-    Mod+Ctrl+Idotless { move-column-to-workspace-down; }
+    Mod+Ctrl+I        { move-column-to-workspace-down; }
     Mod+Ctrl+U        { move-column-to-workspace-up; }
 
     Mod+Shift+U        { move-workspace-down; }
-    Mod+Shift+Idotless { move-workspace-up; }
+    Mod+Shift+I        { move-workspace-up; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
@@ -303,8 +303,8 @@ binds {
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    Mod+Gbreve  { consume-or-expel-window-left; }
-    Mod+Udiaeresis { consume-or-expel-window-right; }
+    Mod+bracketleft  { consume-or-expel-window-left; }
+    Mod+bracketright { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
     Mod+Comma  { consume-window-into-column; }
