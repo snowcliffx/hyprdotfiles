@@ -1,0 +1,11 @@
+[package]
+name = "onur/theultimatefactory"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+private = true
+
+[dependencies]
+
+[place]
+shared-packages = "game.ReplicatedStorage.Packages"
