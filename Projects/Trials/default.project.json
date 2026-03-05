@@ -1,0 +1,28 @@
+{
+  "name": "Trials",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/Shared"
+      },
+      "Packages": {
+        "$path": "Packages"
+      }
+    },
+    "ServerScriptService": {
+      "$path": "src/Server",
+      "ServerPackages": {
+        "$path": "ServerPackages"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$path": "src/Client/Player"
+      },
+      "StarterCharacterScripts": {
+        "$path": "src/Client/Character"
+      }
+    }
+  }
+}

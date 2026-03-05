@@ -1,0 +1,15 @@
+[package]
+name = "onur/untitledeventgame"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+private = true
+
+[dependencies]
+t = "osyrisrblx/t@3.1.1"
+
+[server-dependencies]
+Lyra = "paradoxum-games/lyra@0.6.0"
+
+[place]
+shared-packages = "game.ReplicatedStorage.Packages"
